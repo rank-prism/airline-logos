@@ -5,7 +5,7 @@ class Logo extends React.Component {
 render() {
     return (
         <TableRow>
-            <TableCell>{this.props.code}</TableCell>
+            <TableCell><strong>{this.props.code}</strong>  : {this.props.name}</TableCell>
             <TableCell><img alt={this.props.code} src={`${base_url}/${this.props.code}_1x.png`} /></TableCell>
             <TableCell><img alt={this.props.code} src={`${base_url}/${this.props.code}_2x.png`} /> </TableCell>
             <TableCell><img alt={this.props.code} src={`${base_url}/${this.props.code}_4x.png`} /> </TableCell>
