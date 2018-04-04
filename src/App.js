@@ -30,7 +30,6 @@ class App extends Component {
     airlines.push(['CG', 'PNG Air']);
     airlines.push(['CI', 'China Airlines']);
     airlines.push(['CO', 'Continental Airlines']);
-    airlines.push(['CQ', 'Sunshine Express Airline']);
     airlines.push(['CX', 'Cathay Pacific Airways']);
     airlines.push(['CZ', 'China Southern Airlines']);
     airlines.push(['DL', 'Delta Air Lines']);
