@@ -33,8 +33,8 @@ class App extends Component {
     airlines.push(['CX', 'Cathay Pacific Airways']);
     airlines.push(['CZ', 'China Southern Airlines']);
     airlines.push(['DL', 'Delta Air Lines']);
-    airlines.push(['DN', 'Senegal Airlines']);
-    airlines.push(['DR', 'Air Link Pty Ltd']);
+    // airlines.push(['DN', 'Senegal Airlines']);
+    // airlines.push(['DR', 'Air Link Pty Ltd']);
     airlines.push(['DY', 'Norwegian Air Shuttle']);
     airlines.push(['EI', 'Aer Lingus P.L.C.']);
     airlines.push(['EK', 'Emirates Airlines']);
@@ -43,20 +43,20 @@ class App extends Component {
     airlines.push(['F9', 'Frontier Airlines']);
     airlines.push(['FJ', 'Fiji Airways']);
     airlines.push(['FM', 'Shanghai Airlines']);
-    airlines.push(['FQ', 'Brindabella Airlines']);
+    // airlines.push(['FQ', 'Brindabella Airlines']);
     airlines.push(['FR', 'Ryanair (Ireland)']);
     airlines.push(['FZ', 'Fly Dubai']);
     airlines.push(['GA', 'Garuda Indonesian']);
-    airlines.push(['GE', 'Transasia Airways']);
+    // airlines.push(['GE', 'Transasia Airways']);
     airlines.push(['GF', 'Gulf Air Company']);
     airlines.push(['GK', 'Jetstar Japan']);
     airlines.push(['H1', 'Fly Corporate']);
     airlines.push(['HA', 'Hawaiian Airlines']);
     airlines.push(['HX', 'Hong Kong Airlines']);
     airlines.push(['IB', 'Iberia']);
-    airlines.push(['IC', 'Indian Airlines']);
+    // airlines.push(['IC', 'Indian Airlines']);
     airlines.push(['IE', 'Solomon Airlines']);
-    airlines.push(['IT', 'Kingfisher Airlines']);
+    // airlines.push(['IT', 'Kingfisher Airlines']);
     airlines.push(['JG', 'JetGo Australia']);
     airlines.push(['JL', 'Japan Airlines International']);
     airlines.push(['JQ', 'Jetstar Airways']);
@@ -80,9 +80,9 @@ class App extends Component {
     airlines.push(['NH', 'All Nippon Airways']);
     airlines.push(['NK', 'Spirit Airlines']);
     airlines.push(['NP', 'NILE AIR']);
-    airlines.push(['NW', 'Northwest Airlines Inc']);
+    // airlines.push(['NW', 'Northwest Airlines Inc']);
     airlines.push(['NZ', 'Air New Zealand']);
-    airlines.push(['O7', 'Ozjet Airlines']);
+    // airlines.push(['O7', 'Ozjet Airlines']);
     airlines.push(['OA', 'Olympic Air']);
     airlines.push(['OD', 'MALINDO AIRWAYS']);
     airlines.push(['OS', 'Austrian Airlines']);
@@ -93,7 +93,7 @@ class App extends Component {
     airlines.push(['PX', 'Air Niugini']);
     airlines.push(['Q6', 'Skytrans Airlines']);
     airlines.push(['QF', 'Qantas Airways']);
-    airlines.push(['QO', 'Origin Pacific Airways']);
+    // airlines.push(['QO', 'Origin Pacific Airways']);
     airlines.push(['QQ', 'Alliance Airlines']);
     airlines.push(['QR', 'Qatar Airways']);
     airlines.push(['RJ', 'Royal Jordanian']);
@@ -116,10 +116,10 @@ class App extends Component {
     airlines.push(['UK', 'VISTARA']);
     airlines.push(['UL', 'Srilankan Airlines']);
     airlines.push(['UO', 'Hong Kong Express Airways']);
-    airlines.push(['US', 'Us Airways']);
+    // airlines.push(['US', 'Us Airways']);
     airlines.push(['VA', 'Virgin Australia']);
-    airlines.push(['VC', 'Strategic Airlines']);
-    airlines.push(['VF', 'Valuair Ltd']);
+    // airlines.push(['VC', 'Strategic Airlines']);
+    // airlines.push(['VF', 'Valuair Ltd']);
     airlines.push(['VN', 'Vietnam Airlines']);
     airlines.push(['VS', 'Virgin Atlantic Airways Ltd.']);
     airlines.push(['VX', 'Virgin America']);
@@ -127,7 +127,7 @@ class App extends Component {
     airlines.push(['WN', 'Southwest Airlines']);
     airlines.push(['WY', 'Oman Aviation']);
     airlines.push(['XR', 'Skywest Airlines']);
-    airlines.push(['XY', 'NasAir']);
+    airlines.push(['XY', 'flynas']);
     airlines.push(['ZL', 'Regional Express']);
     
     return (
