@@ -9,6 +9,7 @@ class App extends Component {
     airlines.push(['3K', 'Jetstar Asia Airways']);
     airlines.push(['6E', 'IndiGo Air']);
     airlines.push(['8M', 'Myanmar Airways Intl']);
+    airlines.push(['9F', 'Eurostar']);
     airlines.push(['9W', 'Jet Airways India']);
     airlines.push(['A3', 'Aegean Air']);
     airlines.push(['AA', 'American Airlines']);
