@@ -179,6 +179,7 @@ class App extends Component {
           Airline Logos
         </h1>
         {this.state.failures > 0 && <div style={{color: 'red'}}>failures: {this.state.failures}</div>}
+        <div>Total logos: {airlines.length}</div>
         <Table>
         <TableHead>
           <TableRow>
