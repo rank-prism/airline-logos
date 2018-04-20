@@ -2,11 +2,16 @@ import * as React from 'react';
 import { TableCell, TableRow } from 'material-ui/Table';
 const base_url = 'https://serkowebtest.blob.core.windows.net/airline-logos';
 class Logo extends React.Component {
+    state = {error: false}
+    handleError = (e) => {
+        if(this.props.onError) this.props.onError(e);
+        this.setState(() => ({error: true}));
+    }
     render() {
         return (
-            <TableRow>
+            <TableRow style={this.state.error ? {backgroundColor: '#e86f6f'} : {}}>
                 <TableCell><strong>{this.props.code}</strong>  : {this.props.name}</TableCell>
-                <TableCell><img alt={this.props.code} src={`${base_url}/${this.props.code}_1x.png`} /></TableCell>
+                <TableCell><img alt={this.props.code} src={`${base_url}/${this.props.code}_1x.png`} onError={this.handleError}/></TableCell>
                 <TableCell><img alt={this.props.code} src={`${base_url}/${this.props.code}_2x.png`} /> </TableCell>
                 <TableCell><img alt={this.props.code} src={`${base_url}/${this.props.code}_4x.png`} /> </TableCell>
             </TableRow>
