@@ -151,6 +151,7 @@ class App extends Component {
     // airlines.push(['O7', 'Ozjet Airlines']);
     airlines.push(['OA', 'Olympic Air']);
     airlines.push(['OD', 'MALINDO AIRWAYS']);
+    airlines.push(['OI', 'Hinterland Aviation']);
     airlines.push(['OK', 'Czech Airlines']);
     airlines.push(['OS', 'Austrian Airlines']);
     airlines.push(['OT', 'Aeropelican']);
@@ -167,6 +168,7 @@ class App extends Component {
     airlines.push(['RJ', 'Royal Jordanian']);
     airlines.push(['RO', 'Tarom-Romanian']);
     airlines.push(['S2', 'Jet Lite']);
+    airlines.push(['S8', 'Sounds Air']);
     airlines.push(['SA', 'South African Airways']);
     airlines.push(['SB', 'Air Calin']);
     airlines.push(['SG', 'Spice Jet']);
