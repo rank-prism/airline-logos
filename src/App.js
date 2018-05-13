@@ -4,9 +4,43 @@ import Logo from './Logo';
 import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 
 class App extends Component {
-  state = { failures: 0 }
+  constructor(props) {
+    super(props);
+    const url = 'https://serko-oneclick.serko.com';
+    this.state = {
+      failures: 0,
+      solUrlTemp: url,
+      solUrl: url,
+      tempSolUrlValid: this.isValid(url)
+    };
+
+    this.handleError = this.handleError.bind(this);
+    this.handleSolUrlChange = this.handleSolUrlChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  
   handleError = () => {
     this.setState((prev, props) => ({failures: prev.failures+1}))
+  }
+
+  handleSolUrlChange = (event) => {
+    const value = event.target.value;
+    console.warn(value);
+    this.setState((prev, props) => ({solUrlTemp: value}))
+  }
+
+  isValid = (url) => {
+    const regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+    return regex.test(url);
+  }
+
+  handleSubmit = (event) => {
+    const isValid = this.isValid(this.state.solUrlTemp);
+    const url = isValid ? this.state.solUrlTemp : this.state.solUrl;
+    console.warn(url, this.state.solUrlTemp, isValid);
+    this.setState((prev, props) => ({solUrl: url, tempSolUrlValid: isValid, solUrlTemp: prev.solUrlTemp}));
+    event.preventDefault();
   }
 
   render() {
@@ -180,17 +214,25 @@ class App extends Component {
         </h1>
         {this.state.failures > 0 && <div style={{color: 'red'}}>failures: {this.state.failures}</div>}
         <div>Total logos: {airlines.length}</div>
+        <div>
+          <form onSubmit={this.handleSubmit}>
+          <span style={this.state.tempSolUrlValid ? {} : {color: 'red'}}>Serko Online Url: </span><input type="text" size="50" onChange={this.handleSolUrlChange} value={this.state.solUrlTemp}/>
+          <button value="Update" onClick={this.updateSolUrl}>Update</button>
+          {this.state.tempSolUrlValid}
+          </form>
+        </div>
         <Table>
         <TableHead>
           <TableRow>
             <TableCell>Airline</TableCell>
+            {this.state.solUrl && <TableCell>Classic</TableCell>}
             <TableCell>1x</TableCell>
             <TableCell>2x</TableCell>
             <TableCell>4x</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-        {airlines.map((airline, n) => <Logo code={airline[0]} key={n} name={airline[1]} onError={this.handleError}/>)}
+        {airlines.map((airline, n) => <Logo code={airline[0]} key={n} name={airline[1]} onError={this.handleError} solUrl={this.state.solUrl}/>)}
         </TableBody>
         </Table>
       </div>
