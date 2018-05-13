@@ -26,7 +26,6 @@ class App extends Component {
 
   handleSolUrlChange = (event) => {
     const value = event.target.value;
-    console.warn(value);
     this.setState((prev, props) => ({solUrlTemp: value}))
   }
 
@@ -38,7 +37,7 @@ class App extends Component {
   handleSubmit = (event) => {
     const isValid = this.isValid(this.state.solUrlTemp);
     const url = isValid ? this.state.solUrlTemp : this.state.solUrl;
-    console.warn(url, this.state.solUrlTemp, isValid);
+
     this.setState((prev, props) => ({solUrl: url, tempSolUrlValid: isValid, solUrlTemp: prev.solUrlTemp}));
     event.preventDefault();
   }
